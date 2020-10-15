@@ -1,0 +1,99 @@
+
+:root {
+  
+  --montserrat: 'Exo', sans-serif;
+  --greyD : #333;
+}
+
+body {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: var(--montserrat);
+  font-size:14px;
+}
+
+
+.mrg{
+  margin-right:0px;
+}
+
+.pokeImage{
+    height: 150px;
+    vertical-align: middle;
+    margin: 10px auto;
+    padding: 10px 20px;
+    filter:grayscale()
+}
+
+
+
+.card {
+  background-color:#dbdbdb;
+  border:none;
+}
+
+.card:hover{
+  background-color: lightyellow;
+}
+
+.card:hover > .pokeImage {
+  filter:none;
+}
+
+.pokeball{
+  width:50px;
+}
+
+.pokeball:hover{
+  color:#ef5350;
+}
+
+.btn-pokemon{
+  font-family: var(--montserrat);
+  font-size:0.8em;
+  font-weight:bold;
+  
+}
+
+.btn-pokemon:hover{
+  color: lightyellow;
+  
+}
+
+.card-title{
+  font-family: var(--montserrat);
+  font-weight: 700;
+  color: var(--greyD);
+}
+
+.card-subtitle {
+  font-size:0.9em;
+  
+}
+
+.modal-title{
+  font-family:var(--montserrat);
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.modal-types{
+  font-size:1em;
+  font-weight: bold;
+}
+
+.description-modal{
+  font-size: 1.5em;
+  line-height: 1.4em;
+  margin-bottom:1em;
+  letter-spacing: 0px;
+}
+
+.bg-blue{
+  
+  background-color:#30a7d7;
+  border-radius: 10px;
+}
+
+
