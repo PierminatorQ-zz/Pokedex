@@ -91,9 +91,36 @@ body {
 }
 
 .bg-blue{
-  
+
   background-color:#30a7d7;
   border-radius: 10px;
+}
+
+.title-box{
+  color:white;
+  font-weight: 700;
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.content-box{
+  font-weight:500;
+  font-size:1.5em;
+}
+
+.uli {
+  list-style-image: url(icon/pokebullet_red.png);
+}
+.header{
+  background-color: #ef5350;
+}
+
+.header > h1{
+  color:#FECB36;
+  font-size:4em;
+  font-weight:700;
+  letter-spacing: -1px;
+  -webkit-text-stroke: 1px #3761A8;
 }
 
 

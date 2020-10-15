@@ -20,6 +20,9 @@ $(document).ready(function () {
           $('#pokeTypes').html('')
           $('#pokeMoves').html('')
           $('#pokeGenerations').html('')
+          $('#pokeHeight').html('')
+          $('#pokeWeight').html('')
+          $('#pokeImage').html('')
           getDataPokemon(pokemon_url)
         }
         
@@ -31,7 +34,7 @@ function getDataPokemon(pokemon_url){
   $.ajax(pokemon_url).done(function(data){
     
     let ids= data.id
-    console.log(ids)
+    
 
     i=0
     data.moves.forEach(function(moviment){
@@ -42,6 +45,12 @@ function getDataPokemon(pokemon_url){
       
   })
 
+  
+    $('#pokeHeight').append('<div class="mr-2">'+data.height+'</div>')
+
+    $('#pokeWeight').append('<div class="mr-2">'+data.weight+'</div>')
+
+
     data.types.forEach(function(types){
       $('#pokeTypes').append('<div class="mr-2">'+getTypes(types.type.name)+'</div>')
   })
@@ -50,11 +59,17 @@ function getDataPokemon(pokemon_url){
         $('#pokeAbilities').append('<li>'+category.ability.name+'</li>')
     })
 
+    console.log(data['sprites']['other']['official-artwork']['front_default'])
+      $('#pokeImage').append('<img src="'+data['sprites']['other']['official-artwork']['front_default']+'" alt="" class="img-fluid image-modal">')
+ 
 
-    let generations = data.sprites.versions
+
+
+
+    /* let generations = data.sprites.versions
     Object.keys(generations).forEach(function(gen){
       $('#pokeGenerations').append('<li>'+gen+'</li>')
-    })
+    }) */
 
     $.ajax("http://pokeapi.co/api/v2/pokemon-species/" + ids).done(function(info){
 
@@ -62,6 +77,10 @@ function getDataPokemon(pokemon_url){
         if(element.language.name == "en"){ $('#pokeDescription').append('<h4 class="description-modal">'+element.flavor_text+'</h4>')}
       return
       });
+
+      console.log(info.generation)
+      $('#pokeGenerations').append('<div>'+info.generation.name+'</div>')
+      
 
     })
   })

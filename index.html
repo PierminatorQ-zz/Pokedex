@@ -4,19 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Document</title>
+  <title>Pokedex</title>
   <link rel=”icon” type=”image/x-icon” href="icon/favicon.ico"/>
-  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   
 </head>
 <body>
-  
+  <div class="container-fluid header text-center">
+  <h1 class="py-2">POKEDEX</h1>
+</div>
   <p id="pok"></p>
-  <div class="container">
+  <div class="container mt-5">
     <div class="row">
-      <h1>Hello, world!</h1>
+      
       <div class="row listado-pok d-flex flex-wrap">
       </div>
     </div>
@@ -45,8 +47,8 @@
         <div class="modal-body">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-sm-4">
-                <img src="https://via.placeholder.com/350x450" alt="">
+              <div class="col-sm-4 d-flex align-items-center justify-content-center" id="pokeImage">
+                
               </div>
               <div class="col-md-8 ml-auto" >
 
@@ -54,20 +56,36 @@
                   <div id="pokeDescription" ></div>
                 </div>
                 <div class="d-flex mb-4">
-                  <h4 class="modal-types mr-3">Tipos:</h4>
+                  <h4 class="modal-types mr-3">Tipo:</h4>
                   <div id="pokeTypes" class="d-flex"></div>
                 </div>
                 <div class="row blucarpet bg-blue mx-3 p-4">
-                  <div class="col-md-6"></div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 ">
                     <div>
-                      <h4>Habilidades</h4>
-                      <ol id="pokeAbilities"></ol>
+                      <h4 class="title-box">Altura</h4>
+                      <div class="content-box" id="pokeHeight"></div>
                     </div>
                     
                     <div>
-                      <h4>Movimientos</h4>
-                      <ol id="pokeMoves"></ol>
+                      <h4 class="title-box">Peso</h4>
+                      <div class="content-box" id="pokeWeight"></div>
+                    </div>
+
+                    <div>
+                      <h4 class="title-box">Generaciones</h4>
+                      <div class="content-box" id="pokeGenerations"></div>
+                    </div>
+
+                  </div>
+                  <div class="col-md-6 ">
+                    <div>
+                      <h4 class="title-box">Habilidades</h4>
+                      <ul class="content-box uli" id="pokeAbilities"></ul>
+                    </div>
+                    
+                    <div>
+                      <h4 class="title-box">Movimientos</h4>
+                      <ul class="content-box uli" id="pokeMoves"></ul>
                     </div>
                     
                     
@@ -75,17 +93,14 @@
                   </div>
                 </div>
 
-                <div>
-                  <h4>Generaciones</h4>
-                  <ol id="pokeGenerations"></ol>
-                </div>
+                
 
               </div>
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <!--  <button type="button" class="btn btn-primary">Save changes</button>-->
           </div>
         </div>
       </div>
