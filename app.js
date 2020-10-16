@@ -52,7 +52,7 @@ function getDataPokemon(pokemon_url){
 
 
     data.types.forEach(function(types){
-      $('#pokeTypes').append('<div class="mr-2">'+getTypes(types.type.name)+'</div>')
+      $('#pokeTypes').append('<div class="mr-2 tooltip-test" title="Daño a enemigos">'+getTypes(types.type.name)+'</div>')
   })
 
     data.abilities.forEach(function(category){
@@ -104,7 +104,7 @@ function getpokemones(url){
 function addPokemon(pokemon){
   let id = 0
   let image_svg = "#"
-  let description= "Blank description "
+  let description= "Blank description"
 
   
 
@@ -114,37 +114,22 @@ function addPokemon(pokemon){
     
               
   
-    $.ajax("http://pokeapi.co/api/v2/pokemon-species/" + id).done(function(info){
+    /* $.ajax("http://pokeapi.co/api/v2/pokemon-species/" + id).done(function(info){
     
       info.genera.forEach(function(element){
           if(element.language.name == "en"){ description = element.genus;}
-        });
-    
+        }); */
+    getDescription(id, image_svg, pokemon)
         
       
 
 
  
-    $('.listado-pok').append(
-      
-      '<div class=" col-xs-12 col-sm-3 mb-3">'+
-      '<div class="card text-center h-100 d-flex">'+
-      '<img src="'+image_svg+'" class="card-img-top pokeImage img-fluid" alt="..."></img>'+
-        '<div class="card-body">'+
-          '<h5 class="card-title">'+ capitalize(pokemon.name)+'</h5>'+
-          '<hr>'+
-          '<h6 class="card-subtitle mb-3 text-muted">'+description+'</h6>'+
-          '<a href="#" class="btn btn-pokemon btn-outline-warning text-center" data-toggle="modal" data-pokeurl="'+pokemon.url+'" data-target="#pokeModal" data-name="'+pokemon.name+'">Ver màs</a>'+
-          
-        '</div>'+
-        '</div>'+
-      '</div>'
-      
-    )
+    
 
     })
 
-  })
+  
 
   
     
@@ -161,3 +146,40 @@ const capitalize = (s) => {
   if (typeof s !== 'string') return ''
   return s.charAt(0).toUpperCase() + s.slice(1)
 } 
+
+
+function getDescription(id, image_svg, pokemon){
+  
+  $.ajax("http://pokeapi.co/api/v2/pokemon-species/" + id).done(function(info){
+    
+      info.genera.forEach(function(element){
+          if(element.language.name == "en"){ 
+            description = element.genus;
+            //console.log(description)
+            
+            $('.listado-pok').append(
+      
+              '<div class=" col-xs-12 col-sm-3 mb-3">'+
+              '<div class="card text-center h-100 d-flex">'+
+              '<img src="'+image_svg+'" class="card-img-top pokeImage img-fluid" alt="..."></img>'+
+                '<div class="card-body">'+
+                  '<h5 class="card-title">'+ capitalize(pokemon.name)+'</h5>'+
+                  '<hr>'+
+                  '<h6 class="card-subtitle mb-3 text-muted">'+description+'</h6>'+
+                  '<a href="#" class="btn btn-pokemon btn-outline-warning text-center" data-toggle="modal" data-pokeurl="'+pokemon.url+'" data-target="#pokeModal" data-name="'+pokemon.name+'">Ver màs</a>'+
+                  
+                '</div>'+
+                '</div>'+
+              '</div>'
+              
+            )
+          
+          
+          }
+
+        });
+
+      }) 
+     
+      
+}
