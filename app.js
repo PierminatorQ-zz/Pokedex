@@ -61,16 +61,9 @@ function getDataPokemon(pokemon_url){
 
     console.log(data['sprites']['other']['official-artwork']['front_default'])
       $('#pokeImage').append('<img src="'+data['sprites']['other']['official-artwork']['front_default']+'" alt="" class="img-fluid image-modal">')
- 
 
 
-
-
-    /* let generations = data.sprites.versions
-    Object.keys(generations).forEach(function(gen){
-      $('#pokeGenerations').append('<li>'+gen+'</li>')
-    }) */
-
+      
     $.ajax("http://pokeapi.co/api/v2/pokemon-species/" + ids).done(function(info){
 
       info.flavor_text_entries.slice(-5).forEach(function(element){
@@ -92,8 +85,7 @@ function getpokemones(url){
 
     $.ajax(url).done(function(data){
       //console.log(data)  
-        data.results.forEach(function(pokemon){
-           
+        data.results.forEach(function(pokemon){  
             addPokemon(pokemon)
         })    
         $('#more-pokemons').attr('data-next', data.next)
@@ -111,21 +103,8 @@ function addPokemon(pokemon){
   $.ajax(pokemon.url).done(function(images){ 
     id=images.id
     image_svg = images.sprites.other.dream_world.front_default
-    
-              
-  
-    /* $.ajax("http://pokeapi.co/api/v2/pokemon-species/" + id).done(function(info){
-    
-      info.genera.forEach(function(element){
-          if(element.language.name == "en"){ description = element.genus;}
-        }); */
     getDescription(id, image_svg, pokemon)
-        
-      
-
-
- 
-    
+  
 
     })
 
