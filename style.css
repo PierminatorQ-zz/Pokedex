@@ -123,5 +123,51 @@ body {
   
 }
 
+.rel-damage{
+  padding:5px;
+  font-family: var(--montserrat);
+  font-weight: 700;
+  color: #30a7d7;
+  font-size: 0.8em;
+  border: 1px solid #30a7d7;
+  border-radius: 8px;
+}
 
+.pokeDamage > ul{
+  padding: 10px 10px;
+  border:1px solid #30a7d7;
+  
+}
+
+.pokeDamage > ul >strong{
+  font-size:0.8em;
+  color:#30a7d7;
+  display: block;
+  line-height: 15px;
+  text-align: center;
+  
+}
+
+.pokeDamage > ul > li{
+  font-style: italic;
+  font-size:0.9em;
+  margin-top:10px;
+  list-style-type: square;
+  margin-left:30px;
+}
+
+.rel-ability{
+  padding:5px;
+  font-family: var(--montserrat);
+  font-weight: 700;
+  color:white;
+  font-size: 0.5em;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+.rel-ability:hover {
+  text-decoration: none;
+  
+}
 

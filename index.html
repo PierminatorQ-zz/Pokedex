@@ -32,7 +32,7 @@
   
   
   
-  <!-- Modal -->
+  <!-- Modal descripcion -->
   <div class="modal fade" id="pokeModal" tabindex="-1" aria-labelledby="pokeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
@@ -88,7 +88,7 @@
                       <h4 class="title-box">Movimientos</h4>
                       <ul class="content-box uli" id="pokeMoves"></ul>
                     </div>
-                    
+                   
                     
 
                   </div>
@@ -107,6 +107,119 @@
       </div>
     </div>
   </div>
+
+
+  <!-- fin modal descripcion -->
+
+
+
+
+
+
+
+ <!--inicio modal typo -->
+
+  <div class="modal fade" id="typeModal" tabindex="-1" aria-labelledby="typeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title mx-auto" id="typeTitle">Relaciones de Daño</h5>       
+          <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
+            <img src="icon/cross-out.png" alt="">         
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12 d-flex align-items-center justify-content-center" >
+
+                 <div class="d-flex mb-4">
+                    <div class="row pokeDamage">
+                      <ul class="col-sm-2"> <strong>Doble Daño Recibido</strong> 
+                        <li id="DoubleDamageTo"></li> 
+                      </ul> 
+
+                      <ul class="col-sm-2"> <strong>Doble Daño Inflingido</strong>
+                        <li id="DoubleDamageFrom"></li> 
+                      </ul> 
+                  
+                      <ul class="col-sm-2"> <strong>Medio Daño Recibido</strong>
+                        <li id="HalfDamageTo"></li> 
+                      </ul> 
+
+                      <ul class="col-sm-2"> <strong>Medio Daño Inflingido</strong>
+                        <li id="HalfDamageFrom" ></li> 
+                      </ul> 
+                      <ul class="col-sm-2"> <strong>Sin Daño Recibido</strong>
+                        <li id="NoDamageTo" ></li> 
+                      </ul> 
+                      <ul class="col-sm-2"> <strong>Sin Daño Inflingido</strong>
+                        <li id="NoDamageFrom" ></li> 
+                      </ul>
+                    </div>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <!--  <button type="button" class="btn btn-primary">Save changes</button>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!--fin modal typo -->
+
+
+
+<!--inicio modal ability -->
+
+<div class="modal fade" id="abilityModal" tabindex="-1" aria-labelledby="abilityModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h5 class="modal-title mx-auto" id="typeTitle">Otros Pokemones con esta Habilidad</h5>       
+        <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
+          <img src="icon/cross-out.png" alt="">         
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12 d-flex align-items-center justify-content-center" >
+
+               <div class="d-flex mb-4">
+                  <div class="row pokeAbility">
+                    <ul class="col-md-6"> <strong>Pokemones</strong> 
+                      <li id="pokemon-with-ability"></li> 
+                    </ul> 
+
+                  </div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!--  <button type="button" class="btn btn-primary">Save changes</button>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--fin modal ability -->
+
+
+
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat+Alternates:wght@300;400;700&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

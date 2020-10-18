@@ -1,7 +1,7 @@
 # Pokedex
 
 ### Objetivo:
-- Crear un pokedex con los conocimientos de Ajax, Jquery y usando la API de pokemon.
+- Crear un pokedex con los conocimientos de Fetch, Jquery y usando la API de pokemon.
 
 ### Màs informaciòn del ejercicio
 
