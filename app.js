@@ -243,6 +243,8 @@ function getDamage(url){
                     .then(function(data){
                       let relations = data.damage_relations
                       
+                      cleanInfo()
+
                       PrintDamage(relations.double_damage_to,'#DoubleDamageTo')
                       PrintDamage(relations.double_damage_from,'#DoubleDamageFrom')
                       PrintDamage(relations.half_damage_to,'#HalfDamageTo')
@@ -293,4 +295,14 @@ function PrintDamage(route,id_html){
 
 
                 })
+}
+
+function cleanInfo(){
+  $('#DoubleDamageTo').html('')
+  $('#DoubleDamageFrom').html('')
+  $('#HalfDamageTo').html('')
+  $('#HalfDamageFrom').html('')
+  $('#NoDamageFrom').html('')
+  $('#NoDamageTo').html('')
+          
 }
